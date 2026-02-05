@@ -3,11 +3,12 @@ package oop_00000122231_VanessaValendhitaSantoso.week01
 fun main() {
     val gameTitle: String = "Barbie"
     val price: Int = 67000
+    val userNote: String? = null
 
     val discount = calculateDiscount(price)
     val finalPrice = price - discount
 
-    printReceipt(title = gameTitle, finalPrice = finalPrice)
+    printReceipt(title = gameTitle, finalPrice = finalPrice, note = userNote)
 }
 
 fun calculateDiscount(price: Int): Int = if (price > 500000) {
@@ -16,8 +17,10 @@ fun calculateDiscount(price: Int): Int = if (price > 500000) {
     (price * 0.1).toInt()
 }
 
-fun printReceipt(title: String, finalPrice: Int) {
+fun printReceipt(title: String, finalPrice: Int, note: String?) {
     println("~ STRUK PEMBELIAN STEAMKW ~")
     println("Judul Game  : $title")
     println("Harga Akhir : Rp $finalPrice")
+    println("Catatan     : ${note ?: "Tidak ada catatan"}")
+    println("===========================")
 }
