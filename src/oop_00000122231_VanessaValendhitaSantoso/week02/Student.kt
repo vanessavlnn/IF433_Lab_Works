@@ -9,13 +9,16 @@ class Student(
     init {
         if (nim.length != 5) {
             println("WARNING: Objek tercipta dengan NIM ($nim) yang tidak valid")
-            println("Data mahasiswa $name mungkin akan bermasalah di sistem.")
         } else {
             println("LOG: Objek Student $name berhasil dialokasikan di Memory.")
         }
     }
 
-    constructor(name: String, nim: String, gpa: Double) : this(name = name, nim = nim, major = "Non-Matriculated"){
-        println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
+    constructor(name: String, nim: String)
+            : this(name, nim, 0.0, "Non-Matriculated") {
+        println("LOG: Menggunakan constructor jalur umum.")
     }
+
+    constructor(name: String, nim: String, major: String)
+            : this(name, nim, 0.0, major)
 }
