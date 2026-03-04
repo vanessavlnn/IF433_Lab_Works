@@ -24,15 +24,26 @@ package oop_00000122231_VanessaValendhitaSantoso.week05.labclass
     //}
 //}
 
+//fun main() {
+    //val mathHelper = MathHelper()
+
+    //val luasPersegi = mathHelper.hitungLuas(5)
+    //println("Luas Persegi (sisi 5): $luasPersegi")
+
+    //val luasPersegiPanjang = mathHelper.hitungLuas(5, 10)
+    //println("Luas Persegi Panjang (5x10): $luasPersegiPanjang")
+
+    //val luasLingkaran = mathHelper.hitungLuas(7.0)
+    //println("Luas Lingkaran (r 7): $luasLingkaran")
+//}
+
 fun main() {
-    val mathHelper = MathHelper()
+    val myEWallet = Ewallet("Akun Utama", 50000.0)
+    val myCreditCard = CreditCard("Kartu Utama", 100000.0)
 
-    val luasPersegi = mathHelper.hitungLuas(5)
-    println("Luas Persegi (sisi 5): $luasPersegi")
+    val daftarPembayaran: List<PaymentMethod> = listOf(myEWallet, myCreditCard)
 
-    val luasPersegiPanjang = mathHelper.hitungLuas(5, 10)
-    println("Luas Persegi Panjang (5x10): $luasPersegiPanjang")
-
-    val luasLingkaran = mathHelper.hitungLuas(7.0)
-    println("Luas Lingkaran (r 7): $luasLingkaran")
+    for (metode in daftarPembayaran) {
+        metode.processPayment(75000.0)
+    }
 }
