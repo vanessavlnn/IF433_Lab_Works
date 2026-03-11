@@ -20,10 +20,20 @@ package oop_00000122231_VanessaValendhitaSantoso.week06
     //processCheckout(method = pay2, amount = 150000.0)
 //}
 
-// Main.kt
-
 fun main() {
     val lamp = SmartLamp("L01", "Ruang Tamu")
     val speaker = SmartSpeaker("S01", "Google Nest Dapur")
     val cctv = SmartCCTV("C01", "Ezviz Garasi")
+
+    val hub = SmartHomeHub()
+
+    hub.addDevice(lamp)
+    hub.addDevice(speaker)
+    hub.addDevice(cctv)
+
+    println("--- MENGAKTIFKAN MODE KEAMANAN ---")
+    hub.activateSecurityMode()
+
+    println("\n--- MEMATIKAN SEMUA SAKLAR ---")
+    hub.turnOffAllSwitches()
 }
