@@ -11,4 +11,11 @@ fun main() {
     println("Senjata awal: ${starterWeapon.item.name}, Damage: ${starterWeapon.item.damage}")
 
     println("---")
+
+    val upgradedItem = starterWeapon.item.copy(damage = 25)
+
+    processEvent(SafeZone)
+    processEvent(MonsterEncounter("Goblin Nakal"))
+    processEvent(LootDropped(upgradedItem))
+    processEvent(GameOver("Terkena jebakan racun"))
 }
