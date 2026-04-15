@@ -22,7 +22,7 @@ fun main() {
     val mixedData: List<Any> = listOf(
     "Smartphone",
     1500000,
-    UserProfile("Andi", null),
+    UserProfile("Andi", ""),
     "Laptop",
     4500000.0
     )
