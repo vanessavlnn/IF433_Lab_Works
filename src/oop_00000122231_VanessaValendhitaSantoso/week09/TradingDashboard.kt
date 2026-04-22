@@ -30,3 +30,5 @@ fun main() {
     worstPerformersString.forEach { println("Honor Roll: $it") }
     println("\nPairs Traded: $uniquePairs")
 }
+
+//sudah saya cek
