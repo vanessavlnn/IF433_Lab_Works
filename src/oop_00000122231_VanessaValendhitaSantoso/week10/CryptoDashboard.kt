@@ -23,3 +23,5 @@ fun main() {
         println("ID: ${tx.id} | Amount: ${tx.amount}")
     }
 }
+
+//sudah saya cek ya ka
