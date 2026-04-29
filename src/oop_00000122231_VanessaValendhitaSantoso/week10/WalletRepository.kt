@@ -10,4 +10,13 @@ open class WalletRepository<T> {
     fun getAll(): List<T> {
         return items
     }
+
+    fun findByName(query: String): List<T> {
+        return items.filter {
+            when (it) {
+                is Coin -> it.name.contains(query, ignoreCase = true)
+                else -> false
+            }
+        }
+    }
 }
