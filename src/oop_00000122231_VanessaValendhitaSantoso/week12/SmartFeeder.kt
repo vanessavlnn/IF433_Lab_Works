@@ -34,4 +34,10 @@ fun main() {
     } finally {
         println("Siklus pengecekan dispenser pagi selesai.")
     }
+
+    println("\n=== TEST RUNCATCHING ===")
+    val result = runCatching {
+        dispenseKibble(requestedGram = 30, availableGram = 1000, isJammer = false)
+    }
 }
+
